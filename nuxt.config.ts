@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui'],
   css: ['~/assets/css/main.css'],
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/kollel-ap-frontend-main/' : '/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/demo-nuxt/' : '/',
     head: {
       title: 'Kollel App',
       charset: 'utf-8',
@@ -35,9 +35,6 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/']
-    }
-  }
+    preset: 'github_pages',
+  },
 })
